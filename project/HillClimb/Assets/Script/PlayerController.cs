@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public float power = 100f;
     public float rot = 45f;
-    public float stability = 1.5f;
+    public float stability = 2.0f;
     Rigidbody rb;
+    public int coinCount = 0;
     public bool boosterPressed = false; // check if booster button is pressed
     EngineFuelManager theFuel;
     AudioSource audio;
@@ -25,18 +26,20 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+
         frontWheelMesh = GameObject.FindGameObjectsWithTag("FrontWheelMesh");
         backWheelMesh = GameObject.FindGameObjectsWithTag("BackWheelMesh");
         handleMesh = GameObject.FindGameObjectWithTag("HandleMesh");
         GameObject[] fwcObjects = GameObject.FindGameObjectsWithTag("FrontWheelCollider");
         GameObject[] bwcObjects = GameObject.FindGameObjectsWithTag("BackWheelCollider");
         frontWheels = new WheelCollider[fwcObjects.Length];
-        backWheels  = new WheelCollider[bwcObjects.Length];
-        for (int i = 0; i < frontWheels.Length;i++){
+        backWheels = new WheelCollider[bwcObjects.Length];
+        for (int i = 0; i < frontWheels.Length; i++)
+        {
             frontWheels[i] = fwcObjects[i].GetComponent<WheelCollider>();
         }
-        for (int i = 0; i < backWheels.Length;i++){
+        for (int i = 0; i < backWheels.Length; i++)
+        {
             backWheels[i] = bwcObjects[i].GetComponent<WheelCollider>();
         }
         for (int i = 0; i < frontWheelMesh.Length; i++)
@@ -55,32 +58,38 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.E)&&theFuel.isFuel) // when pressed e button
+    void Update()
+    {
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed e button
         {
             boosterPressed = true;
             audio.Play();
         }
-       
-        if (Input.GetKeyUp(KeyCode.E)) // when we stop pressing e button
+
+        if (Input.GetKeyUp(KeyCode.E ) || theFuel.isEmpty) // when we stop pressing e button
         {
             boosterPressed = false;
             audio.Stop();
         }
+
+
     }
-    
-    void Move() {
+
+    void Move()
+    {
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
         float accel = Input.GetAxis("Booster");
-
-
         //booster
         if (theFuel.isFuel)
         {
             rb.AddRelativeForce(0, 0, rb.mass * boosterWeight * accel);
         }
-        
+
 
         for (int i = 0; i < frontWheels.Length; i++)
         {
@@ -91,11 +100,10 @@ public class PlayerController : MonoBehaviour
         {
             backWheels[i].motorTorque = v * power;
         }
-        
+
         for (int i = 0; i < frontWheels.Length; i++)
         {
             frontWheels[i].steerAngle = h * rot;
-            frontWheels[i].motorTorque = h * power;
         }
 
     }
@@ -111,14 +119,15 @@ public class PlayerController : MonoBehaviour
             backWheelMesh[i].transform.position = wheelPosition;
             backWheelMesh[i].transform.rotation = wheelRotation;
         }
-        
+
         for (int i = 0; i < frontWheels.Length; i++)
         {
             frontWheels[i].GetWorldPose(out wheelPosition, out wheelRotation);
             //frontWheelMesh[i].transform.position = wheelPosition;
             frontWheelMesh[i].transform.rotation = wheelRotation;
         }
-        if (frontWheels.Length > 0) {
+        if (frontWheels.Length > 0)
+        {
             handleMesh.transform.localEulerAngles = new Vector3(0, frontWheels[0].steerAngle, 0);
         }
     }
