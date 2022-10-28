@@ -7,7 +7,7 @@ public class ItemFuelManager : MonoBehaviour
     public float rotateSpeed = 45.0f;
     //public AudioClip audioEat;
     //AudioSource audioSource;
-
+    
     
 
 
@@ -30,8 +30,8 @@ public class ItemFuelManager : MonoBehaviour
         if (other.name == "Player")
         { // when collide with player
 
-
             EngineFuelManager call = GameObject.Find("UI").GetComponent<EngineFuelManager>();
+
             if (call.currentFuel > 3.5)
             {
                 call.currentFuel = 5.0f;

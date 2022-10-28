@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,15 +14,24 @@ public class PlayerController : MonoBehaviour
     public float stability = 2.0f;
     Rigidbody rb;
     public int coinCount = 0;
+    public int MaxCoin = 3;
     public bool boosterPressed = false; // check if booster button is pressed
     EngineFuelManager theFuel;
     AudioSource audio;
     //engine booster
     public float boosterWeight = 5.0f;
+    public Text coinCountFrontText;
+    public Text coinCountBackText;
 
     void Awake()
     {
         audio = GetComponent<AudioSource>();
+        coinCountFrontText.text = "     / " + MaxCoin;
+        coinCountBackText.text = "0   ";
+    }
+    public void GetItem(int count)
+    {
+        coinCountBackText.text = count.ToString()+ "   ";
     }
 
     void Start()
