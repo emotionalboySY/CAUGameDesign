@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public int coinCount = 0;
     public int MaxCoin = 3;
     public bool boosterPressed = false; // check if booster button is pressed
+    public bool breakPressed = false;
     EngineFuelManager theFuel;
     AudioSource audio;
     //engine booster
@@ -74,17 +76,35 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed e button
+        if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed E button
         {
             boosterPressed = true;
             audio.Play();
         }
 
-        if (Input.GetKeyUp(KeyCode.E ) || theFuel.isEmpty) // when we stop pressing e button
+        if (Input.GetKeyUp(KeyCode.E) || theFuel.isEmpty) // when we stop pressing E button
         {
             boosterPressed = false;
             audio.Stop();
         }
+        if (Input.GetKeyDown(KeyCode.B)) // when we stop pressing Space button
+        {
+            breakPressed = true;
+        }
+        if(Input.GetKeyUp(KeyCode.B))
+        {
+            breakPressed = false;
+        }
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.R) && theFuel.isFuel) // when pressed Restart button R
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // load current Stage
+        }
+
+
 
 
     }
@@ -99,6 +119,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddRelativeForce(0, 0, rb.mass * boosterWeight * accel);
         }
+        
 
 
         for (int i = 0; i < frontWheels.Length; i++)
