@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     AudioSource audio;
     //engine booster
     public float boosterWeight = 5.0f;
+    //break power
+    public float breakPower = 5.0f;
+
     public Text coinCountFrontText;
     public Text coinCountBackText;
 
@@ -132,7 +135,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void Break() {
-        rb.AddRelativeForce(0, 0, -2000.0f);
+        if (rb.velocity.magnitude > 5.0f) {
+            rb.AddRelativeForce(0, 0, -rb.mass * breakPower);
+        }
     }
 
     void WheelPosAndAni()
