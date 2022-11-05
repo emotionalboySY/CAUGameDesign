@@ -101,9 +101,9 @@ public class PlayerController : MonoBehaviour
         //     breakPressed = false;
         // }
 
-        if (Input.GetKeyDown(KeyCode.R) && theFuel.isFuel) // when pressed Restart button R
+        if (Input.GetKeyDown(KeyCode.R)) // when pressed Restart button R
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // load current Stage
+            SceneManager.LoadScene("Lobby"); // load current Stage
         }
 
     }
