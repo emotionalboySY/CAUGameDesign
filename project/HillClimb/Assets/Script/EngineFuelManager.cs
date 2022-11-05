@@ -39,6 +39,7 @@ public class EngineFuelManager : MonoBehaviour
             if (currentFuel <= 0)
                 currentFuel = 0;
         }
+
         if (currentFuel == 0)
             isEmpty = true;
         else

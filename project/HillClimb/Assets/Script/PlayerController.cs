@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public int coinCount = 0;
     public int MaxCoin = 3;
     public bool boosterPressed = false; // check if booster button is pressed
-    public bool breakPressed = false;
+    //public bool breakPressed = false;
     EngineFuelManager theFuel;
     AudioSource audio;
     //engine booster
@@ -68,14 +68,13 @@ public class PlayerController : MonoBehaviour
     {
         WheelPosAndAni();
         Move();
+        if(theFuel.isFuel) {
+            Booster();
+        }
     }
 
     void Update()
     {
-
-
-
-
         if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed E button
         {
             boosterPressed = true;
@@ -87,25 +86,22 @@ public class PlayerController : MonoBehaviour
             boosterPressed = false;
             audio.Stop();
         }
-        if (Input.GetKeyDown(KeyCode.B)) // when we stop pressing Space button
+
+        if (Input.GetKey(KeyCode.Q)) // break button
         {
-            breakPressed = true;
+            Break();
+            //breakPressed = true;
+
         }
-        if(Input.GetKeyUp(KeyCode.B))
-        {
-            breakPressed = false;
-        }
-
-
-
+        // if(Input.GetKeyUp(KeyCode.B))
+        // {
+        //     breakPressed = false;
+        // }
 
         if (Input.GetKeyDown(KeyCode.R) && theFuel.isFuel) // when pressed Restart button R
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // load current Stage
         }
-
-
-
 
     }
 
@@ -113,15 +109,7 @@ public class PlayerController : MonoBehaviour
     {
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
-        float accel = Input.GetAxis("Booster");
-        //booster
-        if (theFuel.isFuel)
-        {
-            rb.AddRelativeForce(0, 0, rb.mass * boosterWeight * accel);
-        }
         
-
-
         for (int i = 0; i < frontWheels.Length; i++)
         {
             frontWheels[i].motorTorque = v * power;
@@ -136,7 +124,15 @@ public class PlayerController : MonoBehaviour
         {
             frontWheels[i].steerAngle = h * rot;
         }
+    }
 
+    void Booster() {
+        float accel = Input.GetAxis("Booster");
+        rb.AddRelativeForce(0, 0, rb.mass * boosterWeight * accel);
+    }
+
+    void Break() {
+        rb.AddRelativeForce(0, 0, -2000.0f);
     }
 
     void WheelPosAndAni()
