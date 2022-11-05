@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -23,7 +24,9 @@ public class ButtonManager : MonoBehaviour
         for(int i = 0; i < stage.Length; i++) {
             stage[i] = temp.transform.GetChild(i).gameObject;
         }
-        current = stage[0];
+        maxCnt = 1;
+        cnt = 0;
+        current = stage[cnt];
     }
 
     public void onStage() {
@@ -52,7 +55,14 @@ public class ButtonManager : MonoBehaviour
     }
 
     public void onStart() {
-
+        switch(cnt) {
+            case 0:
+                SceneManager.LoadScene("Practice");
+                break;
+            case 1:
+                SceneManager.LoadScene("Stage1");
+                break;
+        }
     }
 
     public void onLeftArrow() {
