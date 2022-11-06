@@ -127,6 +127,10 @@ public class PlayerController : MonoBehaviour
         {
             frontWheels[i].steerAngle = h * rot;
         }
+        //booster decreased when moving
+        if (v != 0) {
+            theFuel.currentFuel -= Time.deltaTime * 0.2f;
+        }
     }
 
     void Booster() {

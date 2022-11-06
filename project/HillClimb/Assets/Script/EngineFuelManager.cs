@@ -29,15 +29,16 @@ public class EngineFuelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentFuel > 0)
+        if (currentFuel > 0) {
             isFuel = true;
-        else
+        } else {
             isFuel = false;
+            currentFuel = 0;
+        }
+        
         if (thePC.boosterPressed)
         {
             currentFuel -= Time.deltaTime;
-            if (currentFuel <= 0)
-                currentFuel = 0;
         }
 
         if (currentFuel == 0)
