@@ -396,6 +396,7 @@
 "Assets/Script/EngineFuelManager.cs"
 "Assets/Script/fixing/Chasing.cs"
 "Assets/Script/fixing/TempCamera.cs"
+"Assets/Script/GoalManager.cs"
 "Assets/Script/ItemCoinManager.cs"
 "Assets/Script/ItemFuelManager.cs"
 "Assets/Script/PlayerController.cs"

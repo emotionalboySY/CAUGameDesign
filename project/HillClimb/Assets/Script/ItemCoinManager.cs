@@ -6,10 +6,6 @@ public class ItemCoinManager : MonoBehaviour
 {
     public float rotateSpeed = 45.0f;
     
-
-    
-
-
     private void Start()
     {
         //audioSource = GetComponent<AudioSource>();
@@ -22,9 +18,6 @@ public class ItemCoinManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
-        
-
         if (other.name == "Player")
         { // when collide with player
             PlayerController call = GameObject.Find("Player").GetComponent<PlayerController>();

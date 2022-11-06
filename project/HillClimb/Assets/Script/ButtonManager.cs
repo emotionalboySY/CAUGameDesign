@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
 {
     private KindOfWindow window = KindOfWindow.Stage; //Stage, Tuning, Vehicle
     private GameObject[] stage; //Practice, Lake Road, etc
     private GameObject current = null; //What window at now?
+    public TMP_Text coinTxt;
     private int maxCnt; //max count of page
     private int cnt;
 
@@ -18,6 +20,8 @@ public class ButtonManager : MonoBehaviour
     }
 
     private void Start() {
+        coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
+
         GameObject temp = GameObject.Find("Canvas/StageWindow");
         stage = new GameObject[2];
 

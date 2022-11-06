@@ -14,10 +14,9 @@ public class PlayerController : MonoBehaviour
     public float rot = 45f;
     public float stability = 2.0f;
     Rigidbody rb;
-    public int coinCount = 0;
-    public int MaxCoin = 3;
+    public int coinCount = 0; // Remember, we will use PlayerPrefs value as "Coin", Integer value type.
+    public int MaxCoin = 15; //Maybe, make it different when stage changed.
     public bool boosterPressed = false; // check if booster button is pressed
-    //public bool breakPressed = false;
     EngineFuelManager theFuel;
     AudioSource audio;
     //engine booster
