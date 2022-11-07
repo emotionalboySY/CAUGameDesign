@@ -1,1 +1,0 @@
-Temp/ScriptUpdater/325267976/734670707_ButtonManager.cs => Assets/Script/ButtonManager.cs
