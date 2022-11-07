@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 /*
 Speed(float)
 BoosterWeight(float)
@@ -51,6 +52,14 @@ public class ButtonManager : MonoBehaviour
         }
 
         onStage();
+    }
+
+    void Update() {
+        if(tuner.bill == 0 || tuner.bill > PlayerPrefs.GetInt("Coin", 0)) {
+            save.GetComponent<Button>().interactable = false;
+        } else {
+            save.GetComponent<Button>().interactable = true;
+        }
     }
 
     public void onStage() {
@@ -108,15 +117,20 @@ public class ButtonManager : MonoBehaviour
     public void onSave() {
         switch(window) {
             case KindOfWindow.Tuning:
+                int tempCoin = PlayerPrefs.GetInt("Coin", 0);
+                tempCoin -= tuner.bill;
+                PlayerPrefs.SetInt("Coin", tempCoin);
                 PlayerPrefs.SetFloat("Speed", tuner.speed);
                 PlayerPrefs.SetFloat("BoosterWeight", tuner.booster);
                 PlayerPrefs.SetFloat("BreakWeight", tuner.breakValue);
                 PlayerPrefs.SetFloat("Fuel", tuner.fuel);
                 PlayerPrefs.Save();
+                tuner.ClearBill();
                 break;
             case KindOfWindow.Vehicle:
                 break;
         }
+        coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
     }
 
     public void onLeftArrow() {
