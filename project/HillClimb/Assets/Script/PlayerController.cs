@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     GameObject[] frontWheelMesh, backWheelMesh;
     GameObject handleMesh;
 
-    public float power = 100f;
+    public float power;
     public float rot = 45f;
     public float stability = 1.5f;
     Rigidbody rb;
@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     EngineFuelManager theFuel;
     AudioSource audio;
     //engine booster
-    public float boosterWeight = 5.0f;
+    public float boosterWeight;
     //break power
-    public float breakPower = 5.0f;
+    public float breakPower;
 
     public Text coinCountFrontText;
     public Text coinCountBackText;
@@ -32,7 +32,12 @@ public class PlayerController : MonoBehaviour
         audio = GetComponent<AudioSource>();
         coinCountFrontText.text = "     / " + MaxCoin;
         coinCountBackText.text = "0   ";
+
+        power = PlayerPrefs.GetFloat("Speed", 100);
+        boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
+        breakPower = PlayerPrefs.GetFloat("BreakWeight", 5);
     }
+    
     public void GetItem(int count)
     {
         coinCountBackText.text = count.ToString()+ "   ";
@@ -40,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
         frontWheelMesh = GameObject.FindGameObjectsWithTag("FrontWheelMesh");
         backWheelMesh = GameObject.FindGameObjectsWithTag("BackWheelMesh");
         handleMesh = GameObject.FindGameObjectWithTag("HandleMesh");

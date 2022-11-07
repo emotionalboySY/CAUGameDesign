@@ -7,7 +7,7 @@ public class EngineFuelManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] public float maxFuel = 5; // max fuel temp value = 5
+    [SerializeField] public float maxFuel; // max fuel temp value = 5
     public float currentFuel; // current fuel
 
     [SerializeField] Slider slider_JetEngine;
@@ -20,6 +20,7 @@ public class EngineFuelManager : MonoBehaviour
 
     void Start()
     {
+        maxFuel = PlayerPrefs.GetFloat("Fuel", 5);
         currentFuel = maxFuel;
         slider_JetEngine.maxValue = maxFuel;
         slider_JetEngine.value = currentFuel;

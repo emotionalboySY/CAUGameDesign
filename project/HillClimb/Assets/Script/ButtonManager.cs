@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 using TMPro;
 /*
 Speed(float)
-BoosterPower(float)
-BreakPower(float)
-MaxFuel(Float)
+BoosterWeight(float)
+BreakWeight(float)
+Fuel(Float)
 */
 
 public class ButtonManager : MonoBehaviour
@@ -17,6 +17,7 @@ public class ButtonManager : MonoBehaviour
 
     private KindOfWindow window = KindOfWindow.Stage; //Stage, Tuning, Vehicle
     private GameObject[] stage; //Practice, Lake Road, etc
+    private GameObject tuning;
     private GameObject current = null; //What window at now?
     private GameObject left;
     private GameObject right;
@@ -26,6 +27,7 @@ public class ButtonManager : MonoBehaviour
     public TMP_Text coinTxt;
     private int maxCnt; //max count of page
     private int cnt;
+    TuningManager tuner;
 
     enum KindOfWindow {
         Stage,
@@ -34,7 +36,9 @@ public class ButtonManager : MonoBehaviour
     }
 
     private void Start() {
+        tuner = GameObject.Find("TuningManagement").GetComponent<TuningManager>();
         coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
+        tuning = GameObject.Find("Canvas/Tuning/TuningWindow");
         left = GameObject.Find("Canvas/BigWindow/SmallWindow/leftArrow");
         right = GameObject.Find("Canvas/BigWindow/SmallWindow/rightArrow");
         start = GameObject.Find("Canvas/BigWindow/Start");
@@ -73,6 +77,8 @@ public class ButtonManager : MonoBehaviour
         right.SetActive(false);
         start.SetActive(false);
         save.SetActive(true);
+        tuning.SetActive(true);
+        current = tuning;
     }
 
     public void onVehicle() {
@@ -80,6 +86,12 @@ public class ButtonManager : MonoBehaviour
         if (current) {
             current.SetActive(false);
         }
+        maxCnt = VEHICLE_NUM - 1;
+        cnt = 0;
+        left.SetActive(true);
+        right.SetActive(true);
+        start.SetActive(false);
+        save.SetActive(true);
     }
 
     public void onStart() {
@@ -96,6 +108,11 @@ public class ButtonManager : MonoBehaviour
     public void onSave() {
         switch(window) {
             case KindOfWindow.Tuning:
+                PlayerPrefs.SetFloat("Speed", tuner.speed);
+                PlayerPrefs.SetFloat("BoosterWeight", tuner.booster);
+                PlayerPrefs.SetFloat("BreakWeight", tuner.breakValue);
+                PlayerPrefs.SetFloat("Fuel", tuner.fuel);
+                PlayerPrefs.Save();
                 break;
             case KindOfWindow.Vehicle:
                 break;
