@@ -12,6 +12,7 @@ public class GoalManager : MonoBehaviour
             PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
             int coin = player.coinCount + PlayerPrefs.GetInt("Coin", 0);
             PlayerPrefs.SetInt("Coin", coin); 
+            PlayerPrefs.Save();
             SceneManager.LoadScene("Lobby");
         }
     }

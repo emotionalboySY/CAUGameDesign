@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float power = 100f;
     public float rot = 45f;
-    public float stability = 2.0f;
+    public float stability = 1.5f;
     Rigidbody rb;
     public int coinCount = 0; // Remember, we will use PlayerPrefs value as "Coin", Integer value type.
     public int MaxCoin = 15; //Maybe, make it different when stage changed.

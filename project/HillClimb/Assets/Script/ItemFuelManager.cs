@@ -7,10 +7,6 @@ public class ItemFuelManager : MonoBehaviour
     public float rotateSpeed = 45.0f;
     //public AudioClip audioEat;
     //AudioSource audioSource;
-    
-    
-
-
     private void Start()
     {
         //audioSource = GetComponent<AudioSource>();
@@ -25,27 +21,21 @@ public class ItemFuelManager : MonoBehaviour
     {
         //audioSource.clip = audioEat;
         //audioSource.Play(); //Play eatItem audio
-
-
         if (other.name == "Player")
         { // when collide with player
 
             EngineFuelManager call = GameObject.Find("UI").GetComponent<EngineFuelManager>();
+            float max = call.maxFuel;
 
-            if (call.currentFuel > 3.5)
+            if (call.currentFuel > max * 0.7f)
             {
-                call.currentFuel = 5.0f;
+                call.currentFuel = max;
             }
             else
             {
-                call.currentFuel += 1.5f; // 30% increase
+                call.currentFuel += max * 0.3f; // 30% increase
 
             }
-            
-            
-            
-
-
             gameObject.SetActive(false);
         }
     }

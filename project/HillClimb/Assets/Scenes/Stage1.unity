@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18218271, g: 0.22788474, b: 0.30736986, a: 1}
+  m_IndirectSpecularColor: {r: 0.18218195, g: 0.22788377, b: 0.30736822, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14678,7 +14678,7 @@ MonoBehaviour:
   rot: 45
   stability: 1.5
   coinCount: 0
-  MaxCoin: 3
+  MaxCoin: 15
   boosterPressed: 0
   boosterWeight: 5
   breakPower: 5

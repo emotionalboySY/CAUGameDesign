@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+/*
+Speed(float)
+BoosterPower(float)
+BreakPower(float)
+MaxFuel(Float)
+*/
 
 public class ButtonManager : MonoBehaviour
 {
+    static int STAGE_NUM = 2; // num of stage
+    static int VEHICLE_NUM = 1; // num of vehicle
+
     private KindOfWindow window = KindOfWindow.Stage; //Stage, Tuning, Vehicle
     private GameObject[] stage; //Practice, Lake Road, etc
     private GameObject current = null; //What window at now?
+    private GameObject left;
+    private GameObject right;
+    private GameObject start;
+    private GameObject save;
+
     public TMP_Text coinTxt;
     private int maxCnt; //max count of page
     private int cnt;
@@ -21,16 +35,18 @@ public class ButtonManager : MonoBehaviour
 
     private void Start() {
         coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
+        left = GameObject.Find("Canvas/BigWindow/SmallWindow/leftArrow");
+        right = GameObject.Find("Canvas/BigWindow/SmallWindow/rightArrow");
+        start = GameObject.Find("Canvas/BigWindow/Start");
+        save = GameObject.Find("Canvas/BigWindow/Save");
 
         GameObject temp = GameObject.Find("Canvas/StageWindow");
-        stage = new GameObject[2];
-
-        for(int i = 0; i < stage.Length; i++) {
+        stage = new GameObject[STAGE_NUM];
+        for(int i = 0; i < STAGE_NUM; i++) {
             stage[i] = temp.transform.GetChild(i).gameObject;
         }
-        maxCnt = 1;
-        cnt = 0;
-        current = stage[cnt];
+
+        onStage();
     }
 
     public void onStage() {
@@ -38,10 +54,14 @@ public class ButtonManager : MonoBehaviour
         if (current) {
             current.SetActive(false);
         }
-        maxCnt = 1;
+        maxCnt = STAGE_NUM - 1;
         cnt = 0;
         current = stage[cnt];
         current.SetActive(true);
+        left.SetActive(true);
+        right.SetActive(true);
+        start.SetActive(true);
+        save.SetActive(false);
     }
 
     public void onTuning() {
@@ -49,6 +69,10 @@ public class ButtonManager : MonoBehaviour
         if (current) {
             current.SetActive(false);
         }
+        left.SetActive(false);
+        right.SetActive(false);
+        start.SetActive(false);
+        save.SetActive(true);
     }
 
     public void onVehicle() {
@@ -65,6 +89,15 @@ public class ButtonManager : MonoBehaviour
                 break;
             case 1:
                 SceneManager.LoadScene("Stage1");
+                break;
+        }
+    }
+
+    public void onSave() {
+        switch(window) {
+            case KindOfWindow.Tuning:
+                break;
+            case KindOfWindow.Vehicle:
                 break;
         }
     }
