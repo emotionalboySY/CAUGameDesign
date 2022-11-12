@@ -405,6 +405,7 @@
 "Assets/Script/ReturnToLobby.cs"
 "Assets/Script/TimeManager.cs"
 "Assets/Script/TuningManager.cs"
+"Assets/Script/WallManager.cs"
 -langversion:9.0
 
 /deterministic
