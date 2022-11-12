@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void GameOver() {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("GameOver");
     }
 
     void Start()

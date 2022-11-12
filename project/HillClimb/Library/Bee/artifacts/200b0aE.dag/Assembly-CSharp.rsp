@@ -401,6 +401,7 @@
 "Assets/Script/ItemCoinManager.cs"
 "Assets/Script/ItemFuelManager.cs"
 "Assets/Script/PlayerController.cs"
+"Assets/Script/ReturnToLobby.cs"
 "Assets/Script/TimeManager.cs"
 "Assets/Script/TuningManager.cs"
 -langversion:9.0
