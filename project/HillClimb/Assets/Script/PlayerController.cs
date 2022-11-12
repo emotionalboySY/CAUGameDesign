@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         audio = GetComponent<AudioSource>();
-        coinCountFrontText.text = "     / " + MaxCoin;
-        coinCountBackText.text = "0   ";
+        coinCountFrontText.text = "/"+ MaxCoin;
+        coinCountBackText.text = "0";
 
         power = PlayerPrefs.GetFloat("Speed", 100);
         boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
@@ -40,7 +40,11 @@ public class PlayerController : MonoBehaviour
     
     public void GetItem(int count)
     {
-        coinCountBackText.text = count.ToString()+ "   ";
+        coinCountBackText.text = count.ToString();
+    }
+
+    public void GameOver() {
+        SceneManager.LoadScene("GameOver");
     }
 
     void Start()

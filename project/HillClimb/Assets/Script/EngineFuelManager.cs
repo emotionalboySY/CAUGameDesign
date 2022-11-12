@@ -35,6 +35,7 @@ public class EngineFuelManager : MonoBehaviour
         } else {
             isFuel = false;
             currentFuel = 0;
+            thePC.GameOver();
         }
         
         if (thePC.boosterPressed)
