@@ -401,6 +401,7 @@
 "Assets/Script/GoalManager.cs"
 "Assets/Script/ItemCoinManager.cs"
 "Assets/Script/ItemFuelManager.cs"
+"Assets/Script/OnTouchGameover.cs"
 "Assets/Script/PlayerController.cs"
 "Assets/Script/ReturnToLobby.cs"
 "Assets/Script/TimeManager.cs"

@@ -9665,6 +9665,7 @@ MonoBehaviour:
   power: 100
   rot: 45
   stability: 1.5
+  tiltWeight: 0.2
   coinCount: 0
   MaxCoin: 3
   boosterPressed: 0
@@ -21537,6 +21538,10 @@ PrefabInstance:
     - target: {fileID: 7382914248360093874, guid: e50cd9c990d7e8641804a3e0cae3dccc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382914248360093877, guid: e50cd9c990d7e8641804a3e0cae3dccc, type: 3}
+      propertyPath: stability
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7382914248360093877, guid: e50cd9c990d7e8641804a3e0cae3dccc, type: 3}
       propertyPath: coinCountBackText
