@@ -13,12 +13,13 @@ public class PlayerController : MonoBehaviour
     public float power;
     public float rot = 45f;
     public float stability = 1.5f;
+    public float tiltWeight = 0.2f;
     Rigidbody rb;
     public int coinCount = 0; // Remember, we will use PlayerPrefs value as "Coin", Integer value type.
     public int MaxCoin = 15; //Maybe, make it different when stage changed.
     public bool boosterPressed = false; // check if booster button is pressed
     EngineFuelManager theFuel;
-    AudioSource audio;
+    AudioSource playerAudio;
     //engine booster
     public float boosterWeight;
     //break power
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        playerAudio = GetComponent<AudioSource>();
         coinCountFrontText.text = "/"+ MaxCoin;
         coinCountBackText.text = "0";
 
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start()
-    {
+    {  
         frontWheelMesh = GameObject.FindGameObjectsWithTag("FrontWheelMesh");
         backWheelMesh = GameObject.FindGameObjectsWithTag("BackWheelMesh");
         handleMesh = GameObject.FindGameObjectWithTag("HandleMesh");
@@ -88,13 +89,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed E button
         {
             boosterPressed = true;
-            audio.Play();
+            playerAudio.Play();
         }
 
         if (Input.GetKeyUp(KeyCode.E) || theFuel.isEmpty) // when we stop pressing E button
         {
             boosterPressed = false;
-            audio.Stop();
+            playerAudio.Stop();
         }
 
         if (Input.GetKey(KeyCode.Q)) // break button
@@ -138,6 +139,7 @@ public class PlayerController : MonoBehaviour
         if (v != 0) {
             theFuel.currentFuel -= Time.deltaTime * 0.2f;
         }
+        transform.Rotate(new Vector3(0, 0, -h * tiltWeight));
     }
 
     void Booster() {
