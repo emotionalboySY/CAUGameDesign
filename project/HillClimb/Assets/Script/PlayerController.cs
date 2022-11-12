@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
         coinCountBackText.text = count.ToString();
     }
 
+    public void GameOver() {
+        SceneManager.LoadScene("Lobby");
+    }
+
     void Start()
     {
         frontWheelMesh = GameObject.FindGameObjectsWithTag("FrontWheelMesh");
