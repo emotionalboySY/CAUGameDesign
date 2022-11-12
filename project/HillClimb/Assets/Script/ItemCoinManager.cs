@@ -5,10 +5,15 @@ using UnityEngine;
 public class ItemCoinManager : MonoBehaviour
 {
     public float rotateSpeed = 45.0f;
+    AudioSource audioSource;
+    MeshRenderer meshRenderer;
+    MeshCollider meshCollider;
     
     private void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshCollider = GetComponent<MeshCollider>();
     }
 
     void Update()
@@ -23,10 +28,15 @@ public class ItemCoinManager : MonoBehaviour
             PlayerController call = GameObject.Find("Player").GetComponent<PlayerController>();
             call.coinCount += 1;
             call.GetItem(call.coinCount);
-
-            gameObject.SetActive(false);
+            audioSource.Play(0);
+            //gameObject.SetActive(false);
+            meshRenderer.enabled = false;
+            meshCollider.enabled = false;
+            Invoke("destroy", audioSource.clip.length);
         }
     }
 
-
+    void destroy(){
+        gameObject.SetActive(false);
+    }
 }
