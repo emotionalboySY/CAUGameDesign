@@ -21540,6 +21540,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7382914248360093877, guid: e50cd9c990d7e8641804a3e0cae3dccc, type: 3}
+      propertyPath: MaxCoin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382914248360093877, guid: e50cd9c990d7e8641804a3e0cae3dccc, type: 3}
       propertyPath: stability
       value: 2
       objectReference: {fileID: 0}
