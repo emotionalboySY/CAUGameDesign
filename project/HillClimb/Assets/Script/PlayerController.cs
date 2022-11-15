@@ -25,14 +25,14 @@ public class PlayerController : MonoBehaviour
     //break power
     public float breakPower;
 
-    public Text coinCountFrontText;
-    public Text coinCountBackText;
+    //public Text coinCountFrontText;
+    //public Text coinCountBackText;
 
     void Awake()
     {
         playerAudio = GetComponent<AudioSource>();
-        coinCountFrontText.text = "/"+ MaxCoin;
-        coinCountBackText.text = "0";
+        //coinCountFrontText.text = "/"+ MaxCoin;
+        //coinCountBackText.text = "0";
 
         power = PlayerPrefs.GetFloat("Speed", 100);
         boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     
     public void GetItem(int count)
     {
-        coinCountBackText.text = count.ToString();
+        //coinCountBackText.text = count.ToString();
     }
 
     public void GameOver() {
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -stability, 0);
-        theFuel = FindObjectOfType<EngineFuelManager>();
+        theFuel = GetComponent<EngineFuelManager>();
 
     }
     void FixedUpdate()
