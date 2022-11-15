@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,14 +26,14 @@ public class PlayerController : MonoBehaviour
     //break power
     public float breakPower;
 
-    //public Text coinCountFrontText;
-    //public Text coinCountBackText;
+    public TMP_Text coinCountFrontText;
+    public TMP_Text coinCountBackText;
 
     void Awake()
     {
         playerAudio = GetComponent<AudioSource>();
-        //coinCountFrontText.text = "/"+ MaxCoin;
-        //coinCountBackText.text = "0";
+        coinCountFrontText.text = "/"+ MaxCoin;
+        coinCountBackText.text = "0";
 
         power = PlayerPrefs.GetFloat("Speed", 100);
         boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     
     public void GetItem(int count)
     {
-        //coinCountBackText.text = count.ToString();
+        coinCountBackText.text = count.ToString();
     }
 
     public void GameOver() {
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -stability, 0);
-        theFuel = GetComponent<EngineFuelManager>();
+        theFuel = GameObject.Find("Player/UI/UI").GetComponent<EngineFuelManager>();
 
     }
     void FixedUpdate()
@@ -102,12 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             Break();
             //breakPressed = true;
-
         }
-        // if(Input.GetKeyUp(KeyCode.B))
-        // {
-        //     breakPressed = false;
-        // }
 
         if (Input.GetKeyDown(KeyCode.R)) // when pressed Restart button R
         {

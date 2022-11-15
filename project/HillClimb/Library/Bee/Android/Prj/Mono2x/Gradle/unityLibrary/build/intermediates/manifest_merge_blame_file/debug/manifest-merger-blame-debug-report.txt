@@ -28,147 +28,168 @@
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 19-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:28:3-77
 19-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:28:20-74
-20
-21    <uses-feature
-21-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:29:3-88
-22        android:name="android.hardware.touchscreen"
-22-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:29:17-60
-23        android:required="false" />
-23-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:29:61-85
-24    <uses-feature
-24-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:30:3-99
-25        android:name="android.hardware.touchscreen.multitouch"
-25-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:30:17-71
-26        android:required="false" />
-26-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:30:72-96
-27    <uses-feature
-27-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:3-108
-28        android:name="android.hardware.touchscreen.multitouch.distinct"
-28-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:17-80
-29        android:required="false" />
-29-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:81-105
-30    <uses-feature
-30-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:3-111
-31        android:name="android.hardware.vr.headtracking"
-31-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:17-64
-32        android:required="true"
-32-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:65-88
-33        android:version="1" />
-33-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:89-108
-34
-35    <application android:extractNativeLibs="true" >
-35-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-24:17
-35-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:16-48
-36        <activity
-36-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:5-13:16
-37            android:name="com.unity3d.player.UnityPlayerActivity"
-37-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
-38            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|uiMode"
-38-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:204-305
-39            android:hardwareAccelerated="false"
-39-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:341-376
-40            android:launchMode="singleTask"
-40-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:172-203
-41            android:resizeableActivity="false"
-41-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:306-340
-42            android:screenOrientation="landscape"
-42-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:134-171
-43            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
-43-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-133
-44            <intent-filter>
-44-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:7-9:23
-45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:9-61
-45-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-58
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:9-69
-47-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:19-66
-48                <category android:name="com.oculus.intent.category.VR" />
-48-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:9-66
-48-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:19-63
-49            </intent-filter>
-50
-51            <meta-data
-51-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:7-82
-52                android:name="unityplayer.UnityActivity"
-52-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:18-58
-53                android:value="true" />
-53-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:59-79
-54            <meta-data
-54-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:7-78
-55                android:name="android.notch_support"
-55-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:18-54
-56                android:value="true" />
-56-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-75
-57            <meta-data
-57-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:7-81
-58                android:name="com.oculus.vr.focusaware"
-58-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:18-57
-59                android:value="true" />
-59-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:58-78
-60        </activity>
-61
-62        <meta-data
-62-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-69
-63            android:name="unity.splash-mode"
-63-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-48
-64            android:value="0" />
-64-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:49-66
-65        <meta-data
-65-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-74
-66            android:name="unity.splash-enable"
-66-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:16-50
-67            android:value="True" />
-67-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:51-71
-68        <meta-data
-68-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:5-78
-69            android:name="unity.launch-fullscreen"
-69-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:16-54
-70            android:value="True" />
-70-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:55-75
-71        <meta-data
-71-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:5-84
-72            android:name="unity.allow-resizable-window"
-72-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:16-59
-73            android:value="False" />
-73-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:60-81
-74        <meta-data
-74-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:5-81
-75            android:name="notch.config"
-75-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:16-43
-76            android:value="portrait|landscape" />
-76-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:44-78
-77        <meta-data
-77-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:5-97
-78            android:name="com.samsung.android.vr.application.mode"
-78-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:16-70
-79            android:value="vr_only" />
-79-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:71-94
-80        <meta-data
-80-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:5-91
-81            android:name="com.unity.xr.oculus.LowOverheadMode"
-81-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:16-66
-82            android:value="false" />
-82-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:67-88
-83        <meta-data
-83-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:5-88
-84            android:name="com.unity.xr.oculus.LateLatching"
-84-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:16-63
-85            android:value="false" />
-85-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:64-85
-86        <meta-data
-86-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:5-93
-87            android:name="com.unity.xr.oculus.LateLatchingDebug"
-87-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:16-68
-88            android:value="false" />
-88-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:69-90
-89        <meta-data
-89-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:5-90
-90            android:name="com.oculus.supportedDevices"
-90-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:16-58
-91            android:value="quest|quest2" />
-91-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:59-87
-92    </application>
-93
-94</manifest>
+20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+20-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:29:3-69
+20-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:29:20-66
+21    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+21-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:30:3-78
+21-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:30:20-75
+22
+23    <uses-feature
+23-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:3-87
+24        android:name="android.hardware.microphone"
+24-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:17-59
+25        android:required="false" />
+25-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:31:60-84
+26    <uses-feature
+26-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:3-88
+27        android:name="android.hardware.touchscreen"
+27-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:17-60
+28        android:required="false" />
+28-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:32:61-85
+29    <uses-feature
+29-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:33:3-99
+30        android:name="android.hardware.touchscreen.multitouch"
+30-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:33:17-71
+31        android:required="false" />
+31-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:33:72-96
+32    <uses-feature
+32-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:34:3-108
+33        android:name="android.hardware.touchscreen.multitouch.distinct"
+33-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:34:17-80
+34        android:required="false" />
+34-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:34:81-105
+35    <uses-feature
+35-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:35:3-111
+36        android:name="android.hardware.vr.headtracking"
+36-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:35:17-64
+37        android:required="true"
+37-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:35:85-108
+38        android:version="1" />
+38-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:35:65-84
+39
+40    <application
+40-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-24:17
+41        android:allowBackup="false"
+41-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:114-141
+42        android:extractNativeLibs="true"
+42-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:16-48
+43        android:icon="@mipmap/app_icon"
+43-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:82-113
+44        android:label="@string/app_name"
+44-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:49-81
+45        android:networkSecurityConfig="@xml/network_sec_config" >
+45-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:142-197
+46        <activity
+46-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:5-13:16
+47            android:name="com.unity3d.player.UnityPlayerActivity"
+47-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
+48            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|uiMode"
+48-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:204-305
+49            android:hardwareAccelerated="false"
+49-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:341-376
+50            android:launchMode="singleTask"
+50-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:172-203
+51            android:resizeableActivity="false"
+51-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:306-340
+52            android:screenOrientation="landscape"
+52-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:134-171
+53            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+53-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-133
+54            <intent-filter>
+54-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:7-9:23
+55                <action android:name="android.intent.action.MAIN" />
+55-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:9-61
+55-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-58
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:9-69
+57-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:19-66
+58                <category android:name="com.oculus.intent.category.VR" />
+58-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:9-66
+58-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:19-63
+59            </intent-filter>
+60
+61            <meta-data
+61-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:7-82
+62                android:name="unityplayer.UnityActivity"
+62-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:18-58
+63                android:value="true" />
+63-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:59-79
+64            <meta-data
+64-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:7-78
+65                android:name="android.notch_support"
+65-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:18-54
+66                android:value="true" />
+66-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:55-75
+67            <meta-data
+67-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:7-81
+68                android:name="com.oculus.vr.focusaware"
+68-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:18-57
+69                android:value="true" />
+69-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:58-78
+70        </activity>
+71
+72        <meta-data
+72-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-69
+73            android:name="unity.splash-mode"
+73-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-48
+74            android:value="0" />
+74-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:49-66
+75        <meta-data
+75-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-74
+76            android:name="unity.splash-enable"
+76-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:16-50
+77            android:value="True" />
+77-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:51-71
+78        <meta-data
+78-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:5-78
+79            android:name="unity.launch-fullscreen"
+79-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:16-54
+80            android:value="True" />
+80-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:55-75
+81        <meta-data
+81-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:5-84
+82            android:name="unity.allow-resizable-window"
+82-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:16-59
+83            android:value="False" />
+83-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:60-81
+84        <meta-data
+84-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:5-81
+85            android:name="notch.config"
+85-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:16-43
+86            android:value="portrait|landscape" />
+86-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:44-78
+87        <meta-data
+87-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:5-97
+88            android:name="com.samsung.android.vr.application.mode"
+88-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:16-70
+89            android:value="vr_only" />
+89-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:71-94
+90        <meta-data
+90-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:5-91
+91            android:name="com.unity.xr.oculus.LowOverheadMode"
+91-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:16-66
+92            android:value="false" />
+92-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:67-88
+93        <meta-data
+93-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:5-88
+94            android:name="com.unity.xr.oculus.LateLatching"
+94-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:16-63
+95            android:value="false" />
+95-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:64-85
+96        <meta-data
+96-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:5-93
+97            android:name="com.unity.xr.oculus.LateLatchingDebug"
+97-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:16-68
+98            android:value="false" />
+98-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:69-90
+99        <meta-data
+99-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:5-90
+100            android:name="com.oculus.supportedDevices"
+100-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:16-58
+101            android:value="quest|quest2" />
+101-->C:\Users\shj97\Desktop\CAUGameDesign\CAUGameDesign\project\HillClimb\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:59-87
+102    </application>
+103
+104</manifest>

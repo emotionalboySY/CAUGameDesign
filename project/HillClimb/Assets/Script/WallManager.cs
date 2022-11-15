@@ -9,7 +9,7 @@ public class WallManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thePC = FindObjectOfType<PlayerController>();
+        thePC = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
