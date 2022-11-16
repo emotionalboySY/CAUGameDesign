@@ -307,14 +307,14 @@
 -r:"C:/Users/shj97/Desktop/CAUGameDesign/CAUGameDesign/project/HillClimb/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/Facebook.WitAI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Data/DictationSession.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/DictationService.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Events/DictationEvents.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Events/DictationSessionEvent.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/MultiRequestTranscription.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/ServiceReferences/DictationServiceAudioEventReference.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/ServiceReferences/DictationServiceReference.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/WitDictation.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Data/DictationSession.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/DictationService.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Events/DictationEvents.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Events/DictationSessionEvent.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/MultiRequestTranscription.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/ServiceReferences/DictationServiceAudioEventReference.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/ServiceReferences/DictationServiceReference.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/WitDictation.cs"
 -langversion:9.0
 
 /deterministic

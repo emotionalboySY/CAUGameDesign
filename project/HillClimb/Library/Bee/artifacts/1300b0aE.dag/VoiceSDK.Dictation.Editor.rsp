@@ -353,9 +353,9 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/VoiceSDK.Dictation.Runtime.ref.dll"
-"Assets/Oculus/Voice/Features/Dictation/Scripts/Editor/AppDictationExperienceEditor.cs"
-"Assets/Oculus/Voice/Features/Dictation/Scripts/Editor/Data/AppDictationDataCreation.cs"
-"Assets/Oculus/Voice/Features/Dictation/Scripts/Editor/Drawers/WitDictationRuntimeConfigDrawer.cs"
+"Assets/Import/Oculus/Voice/Features/Dictation/Scripts/Editor/AppDictationExperienceEditor.cs"
+"Assets/Import/Oculus/Voice/Features/Dictation/Scripts/Editor/Data/AppDictationDataCreation.cs"
+"Assets/Import/Oculus/Voice/Features/Dictation/Scripts/Editor/Drawers/WitDictationRuntimeConfigDrawer.cs"
 -langversion:9.0
 
 /deterministic

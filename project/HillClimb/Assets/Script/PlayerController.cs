@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     GameObject handleMesh;
 
     public float power;
-    public float rot = 45f;
+    //public float rot = 45f;
+    public float rotSensitive = 60f;
     public float stability = 1.5f;
     public float tiltWeight = 0.2f;
     Rigidbody rb;
@@ -28,6 +29,9 @@ public class PlayerController : MonoBehaviour
 
     public TMP_Text coinCountFrontText;
     public TMP_Text coinCountBackText;
+
+    public GameObject leftC;
+    public GameObject rightC;
 
     void Awake()
     {
@@ -105,17 +109,22 @@ public class PlayerController : MonoBehaviour
             //breakPressed = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R)) // when pressed Restart button R
+/*        if (Input.GetKeyDown(KeyCode.R)) // when pressed Restart button R
         {
             SceneManager.LoadScene("Lobby"); // load current Stage
-        }
+        }*/
 
+        if(OVRInput.GetDown(OVRInput.Button.Start))
+        {
+            SceneManager.LoadScene("Stage1");
+        }
     }
 
     void Move()
     {
         float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        //float h = Input.GetAxis("Horizontal");
+        float rot = (leftC.transform.localPosition.z - rightC.transform.localPosition.z) * rotSensitive;
         
         for (int i = 0; i < frontWheels.Length; i++)
         {
@@ -129,13 +138,13 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < frontWheels.Length; i++)
         {
-            frontWheels[i].steerAngle = h * rot;
+            frontWheels[i].steerAngle = rot;
         }
         //booster decreased when moving
         if (v != 0) {
             theFuel.currentFuel -= Time.deltaTime * 0.2f;
         }
-        transform.Rotate(new Vector3(0, 0, -h * tiltWeight));
+        //transform.Rotate(new Vector3(0, 0, -h * tiltWeight));
     }
 
     void Booster() {

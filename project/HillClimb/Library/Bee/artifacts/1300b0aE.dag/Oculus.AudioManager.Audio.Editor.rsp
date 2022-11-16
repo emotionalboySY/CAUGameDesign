@@ -350,13 +350,13 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/AudioImportPostProcessor.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/AudioManagerInspector.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/MinMaxPropertyDrawer.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/MixerSnapshotPropertyDrawer.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/OSPPropsPropertyDrawer.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXPropertyDrawer.cs"
-"Assets/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXRefPropertyDrawer.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/AudioImportPostProcessor.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/AudioManagerInspector.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/MinMaxPropertyDrawer.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/MixerSnapshotPropertyDrawer.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/OSPPropsPropertyDrawer.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXPropertyDrawer.cs"
+"Assets/Import/Oculus/AudioManager/Scripts/Audio/Editor/SoundFXRefPropertyDrawer.cs"
 -langversion:9.0
 
 /deterministic

@@ -350,8 +350,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Editor/Drawers/ArrayElementTitleDrawer.cs"
-"Assets/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Editor/Utils/AssistantEditorUtils.cs"
+"Assets/Import/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Editor/Drawers/ArrayElementTitleDrawer.cs"
+"Assets/Import/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Editor/Utils/AssistantEditorUtils.cs"
 -langversion:9.0
 
 /deterministic

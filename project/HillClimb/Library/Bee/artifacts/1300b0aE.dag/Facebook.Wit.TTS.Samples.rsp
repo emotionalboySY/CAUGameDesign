@@ -343,9 +343,9 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Facebook.Wit.TTS.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSCacheToggle.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSErrorText.cs"
-"Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSSpeakerInput.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSCacheToggle.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSErrorText.cs"
+"Assets/Import/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scripts/TTSSpeakerInput.cs"
 -langversion:9.0
 
 /deterministic

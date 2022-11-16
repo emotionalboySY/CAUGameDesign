@@ -352,10 +352,10 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/LipSync/Editor/OVRLipSyncBuildPostProcessor.cs"
-"Assets/Oculus/LipSync/Editor/OVRLipSyncContextMorphTargetEditor.cs"
-"Assets/Oculus/LipSync/Editor/OVRLipSyncTool.cs"
-"Assets/Oculus/LipSync/Editor/OVRNamedArrayPropertyDrawer.cs"
+"Assets/Import/Oculus/LipSync/Editor/OVRLipSyncBuildPostProcessor.cs"
+"Assets/Import/Oculus/LipSync/Editor/OVRLipSyncContextMorphTargetEditor.cs"
+"Assets/Import/Oculus/LipSync/Editor/OVRLipSyncTool.cs"
+"Assets/Import/Oculus/LipSync/Editor/OVRNamedArrayPropertyDrawer.cs"
 -langversion:9.0
 
 /deterministic

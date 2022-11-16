@@ -359,14 +359,14 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/VR/Scripts/Editor/OculusXRFeatureEnabler.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVRCustomSkeletonEditor.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVREditorUtil.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVRManagerEditor.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVROverlayEditor.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVRPassthroughLayerEditor.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVRProfilerDeprecated.cs"
-"Assets/Oculus/VR/Scripts/Editor/OVRProjectConfigEditor.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OculusXRFeatureEnabler.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVRCustomSkeletonEditor.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVREditorUtil.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVRManagerEditor.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVROverlayEditor.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVRPassthroughLayerEditor.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVRProfilerDeprecated.cs"
+"Assets/Import/Oculus/VR/Scripts/Editor/OVRProjectConfigEditor.cs"
 -langversion:9.0
 
 /deterministic

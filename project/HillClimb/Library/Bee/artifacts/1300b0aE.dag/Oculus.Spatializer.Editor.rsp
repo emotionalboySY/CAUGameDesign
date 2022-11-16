@@ -352,13 +352,13 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Oculus/Spatializer/editor/ONSPAudioPluginUpdater.cs"
-"Assets/Oculus/Spatializer/editor/ONSPAudioPluginUpdaterStub.cs"
-"Assets/Oculus/Spatializer/editor/ONSPAudioSourceEditor.cs"
-"Assets/Oculus/Spatializer/editor/ONSPPropagationGeometryEditor.cs"
-"Assets/Oculus/Spatializer/editor/ONSPPropagationMaterialEditor.cs"
-"Assets/Oculus/Spatializer/editor/ONSPPropagationSerializationManager.cs"
-"Assets/Oculus/Spatializer/editor/ONSPReflectionCustomGUI.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPAudioPluginUpdater.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPAudioPluginUpdaterStub.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPAudioSourceEditor.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPPropagationGeometryEditor.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPPropagationMaterialEditor.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPPropagationSerializationManager.cs"
+"Assets/Import/Oculus/Spatializer/editor/ONSPReflectionCustomGUI.cs"
 -langversion:9.0
 
 /deterministic
