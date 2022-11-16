@@ -1,0 +1,7 @@
+time = a / 80
+coin = b / 36
+left fuel = c / 100
+
+Score = (80 - a) * (b / 36) * c * when clear(x2)
+
+switch high score if new score is achieved 
