@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     GameObject handleMesh;
 
     public float power;
-    //public float rot = 45f;
     public float rotSensitive = 60f;
     public float stability = 1.5f;
     public float tiltWeight = 0.2f;
@@ -33,17 +32,20 @@ public class PlayerController : MonoBehaviour
     public GameObject leftC;
     public GameObject rightC;
 
+    HandleReturn leftHandle;
+    HandleReturn rightHandle;
+
     void Awake()
     {
         playerAudio = GetComponent<AudioSource>();
-        coinCountFrontText.text = "/"+ MaxCoin;
+        coinCountFrontText.text = "/" + MaxCoin;
         coinCountBackText.text = "0";
 
         power = PlayerPrefs.GetFloat("Speed", 100);
         boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
         breakPower = PlayerPrefs.GetFloat("BreakWeight", 5);
     }
-    
+
     public void GetItem(int count)
     {
         coinCountBackText.text = count.ToString();
@@ -54,7 +56,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start()
-    {  
+    {
         frontWheelMesh = GameObject.FindGameObjectsWithTag("FrontWheelMesh");
         backWheelMesh = GameObject.FindGameObjectsWithTag("BackWheelMesh");
         handleMesh = GameObject.FindGameObjectWithTag("HandleMesh");
@@ -78,78 +80,76 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -stability, 0);
         theFuel = GameObject.Find("Player/UI/UI").GetComponent<EngineFuelManager>();
+        leftHandle = GameObject.Find("Player/left handle").GetComponent<HandleReturn>();
+        rightHandle = GameObject.Find("Player/right handle").GetComponent<HandleReturn>();
 
     }
     void FixedUpdate()
     {
         WheelPosAndAni();
         Move();
-        if(theFuel.isFuel) {
-            Booster();
+        if (leftHandle.Activate && rightHandle.Activate)
+        {
+            Rotate();
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && theFuel.isFuel) // when pressed E button
-        {
-            boosterPressed = true;
-            playerAudio.Play();
-        }
-
-        if (Input.GetKeyUp(KeyCode.E) || theFuel.isEmpty) // when we stop pressing E button
-        {
-            boosterPressed = false;
-            playerAudio.Stop();
-        }
-
-        if (Input.GetKey(KeyCode.Q)) // break button
+        if (OVRInput.Get(OVRInput.Button.One) && leftHandle.Activate && rightHandle.Activate) // break button
         {
             Break();
-            //breakPressed = true;
         }
 
-/*        if (Input.GetKeyDown(KeyCode.R)) // when pressed Restart button R
+        if (OVRInput.GetDown(OVRInput.Button.Start))
         {
-            SceneManager.LoadScene("Lobby"); // load current Stage
-        }*/
-
-        if(OVRInput.GetDown(OVRInput.Button.Start))
-        {
-            SceneManager.LoadScene("Stage1");
+            SceneManager.LoadScene("Stage1"); //Final: Lobby. This is temp.
         }
     }
 
     void Move()
     {
-        float v = Input.GetAxis("Vertical");
-        //float h = Input.GetAxis("Horizontal");
+        if (OVRInput.Get(OVRInput.Button.Two) && theFuel.isFuel && leftHandle.Activate && rightHandle.Activate) // go forward
+        {
+            playerAudio.Play();
+            theFuel.currentFuel -= Time.deltaTime * 0.2f;
+            for (int i = 0; i < frontWheels.Length; i++)
+            {
+                frontWheels[i].motorTorque = power;
+            }
+
+            for (int i = 0; i < backWheels.Length; i++)
+            {
+                backWheels[i].motorTorque = power;
+            }
+
+        } else
+        {
+            playerAudio.Stop();
+            for (int i = 0; i < frontWheels.Length; i++)
+            {
+                frontWheels[i].motorTorque = 0;
+            }
+
+            for (int i = 0; i < backWheels.Length; i++)
+            {
+                backWheels[i].motorTorque = 0;
+            }
+        }
+    }
+
+    void Rotate()
+    {
         float rot = (leftC.transform.localPosition.z - rightC.transform.localPosition.z) * rotSensitive;
-        
-        for (int i = 0; i < frontWheels.Length; i++)
-        {
-            frontWheels[i].motorTorque = v * power;
-        }
-
-        for (int i = 0; i < backWheels.Length; i++)
-        {
-            backWheels[i].motorTorque = v * power;
-        }
-
         for (int i = 0; i < frontWheels.Length; i++)
         {
             frontWheels[i].steerAngle = rot;
-        }
-        //booster decreased when moving
-        if (v != 0) {
-            theFuel.currentFuel -= Time.deltaTime * 0.2f;
         }
         //transform.Rotate(new Vector3(0, 0, -h * tiltWeight));
     }
 
     void Booster() {
-        float accel = Input.GetAxis("Booster");
-        rb.AddRelativeForce(0, 0, rb.mass * boosterWeight * accel);
+        rb.AddRelativeForce(0, 0, rb.mass * boosterWeight);
     }
 
     void Break() {
@@ -173,7 +173,6 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < frontWheels.Length; i++)
         {
             frontWheels[i].GetWorldPose(out wheelPosition, out wheelRotation);
-            //frontWheelMesh[i].transform.position = wheelPosition;
             frontWheelMesh[i].transform.rotation = wheelRotation;
         }
         if (frontWheels.Length > 0)

@@ -26,7 +26,7 @@ public class EngineFuelManager : MonoBehaviour
         currentFuel = maxFuel;
         slider_JetEngine.maxValue = maxFuel;
         slider_JetEngine.value = currentFuel;
-        thePC = GameObject.Find("Player").GetComponent< PlayerController>();
+        thePC = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
