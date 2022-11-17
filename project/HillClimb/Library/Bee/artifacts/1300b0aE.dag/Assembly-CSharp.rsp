@@ -410,7 +410,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/VoiceSDK.Dictation.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/VoiceSDK.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/VoiceSDK.Runtime.ref.dll"
-"Assets/hand_test/script/armFollowingHandBehavior.cs"
+"Assets/Import/hand_test/script/armFollowingHandBehavior.cs"
 "Assets/Import/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs"
 "Assets/Import/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs"
 "Assets/Import/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs"
