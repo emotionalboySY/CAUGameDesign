@@ -5,6 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class GoalManager : MonoBehaviour
 {
+    //PlayerController thePC;
+    //void Start() {
+        
+    //    thePC = FindObjectOfType<PlayerController>();
+
+    //}
+    //void Update() {
+        
+    //    if (thePC.coinCount > 50)
+    //    {
+    //        Able();
+    //    }
+    //    else
+    //    {
+    //        Disable();
+    //    }
+    //    Debug.Log(thePC.coinCount);
+        
+    
+    //}
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
@@ -15,5 +35,15 @@ public class GoalManager : MonoBehaviour
             PlayerPrefs.Save();
             SceneManager.LoadScene("Lobby");
         }
+    }
+
+    void Disable()
+    {
+        gameObject.SetActive(false);
+
+    }
+    void Able()
+    {
+        gameObject.SetActive(true);
     }
 }
