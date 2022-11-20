@@ -44,8 +44,12 @@ public class PlayerController : MonoBehaviour
         coinCountBackText.text = count.ToString();
     }
 
-    public void GameOver() {
+    void LoadGameOverScene() {
         SceneManager.LoadScene("GameOver");
+    }
+    public void GameOver() {
+        rb.centerOfMass = new Vector3(0, 1.0f, 0);
+        Invoke("LoadGameOverScene",  1.0f);
     }
 
     void Start()
