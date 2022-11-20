@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float tiltWeight = 0.2f;
     Rigidbody rb;
     public int coinCount = 0; // Remember, we will use PlayerPrefs value as "Coin", Integer value type.
-    public int MaxCoin = 15; //Maybe, make it different when stage changed.
+    public int MaxCoin = 66; //Maybe, make it different when stage changed.
     public bool boosterPressed = false; // check if booster button is pressed
     EngineFuelManager theFuel;
     AudioSource playerAudio;
@@ -44,8 +44,12 @@ public class PlayerController : MonoBehaviour
         coinCountBackText.text = count.ToString();
     }
 
-    public void GameOver() {
+    void LoadGameOverScene() {
         SceneManager.LoadScene("GameOver");
+    }
+    public void GameOver() {
+        rb.centerOfMass = new Vector3(0, 1.0f, 0);
+        Invoke("LoadGameOverScene",  1.0f);
     }
 
     void Start()

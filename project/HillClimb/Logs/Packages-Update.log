@@ -44,3 +44,11 @@ The following packages were updated:
   com.unity.collab-proxy from version 1.13.5 to 1.17.2
   com.unity.timeline from version 1.6.2 to 1.6.4
   com.unity.visualscripting from version 1.7.6 to 1.7.8
+
+=== Sun Nov 20 16:46:28 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 업데이트됨:
+  com.unity.collab-proxy 1.17.2 버전에서 1.17.6버전으로  com.unity.ide.rider 3.0.15 버전에서 3.0.16버전으로

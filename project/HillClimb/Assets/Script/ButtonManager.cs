@@ -13,7 +13,7 @@ Fuel(Float)
 
 public class ButtonManager : MonoBehaviour
 {
-    static int STAGE_NUM = 2; // num of stage
+    static int STAGE_NUM = 3; // num of stage
     static int VEHICLE_NUM = 1; // num of vehicle
 
     private KindOfWindow window = KindOfWindow.Stage; //Stage, Tuning, Vehicle
@@ -110,6 +110,9 @@ public class ButtonManager : MonoBehaviour
                 break;
             case 1:
                 SceneManager.LoadScene("Stage1");
+                break;
+            case 2:
+                SceneManager.LoadScene("Stage2");
                 break;
         }
     }
