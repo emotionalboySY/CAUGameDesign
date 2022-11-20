@@ -27,4 +27,11 @@ public class OutsideTriggerManager : MonoBehaviour
             isOutSideTouched = true;
         }
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.name == "Player" || other.gameObject.name == "Wheel_F" || other.gameObject.name == "Wheel_B"){
+            isOutSideTouched = true;
+        }
+    }
+
 }

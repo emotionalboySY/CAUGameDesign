@@ -402,6 +402,7 @@
 "Assets/Script/GoalManager.cs"
 "Assets/Script/ItemCoinManager.cs"
 "Assets/Script/ItemFuelManager.cs"
+"Assets/Script/OnPlayerFallManager.cs"
 "Assets/Script/OutsideTriggerManager.cs"
 "Assets/Script/PlayerController.cs"
 "Assets/Script/ReturnToLobby.cs"
