@@ -33,7 +33,7 @@ public class GoalManager : MonoBehaviour
             int coin = player.coinCount + PlayerPrefs.GetInt("Coin", 0);
             PlayerPrefs.SetInt("Coin", coin); 
             PlayerPrefs.Save();
-            SceneManager.LoadScene("Lobby");
+            SceneManager.LoadScene("GameClear");
         }
     }
 
