@@ -49,6 +49,18 @@ public class ButtonManager : MonoBehaviour
         stage = new GameObject[STAGE_NUM];
         for(int i = 0; i < STAGE_NUM; i++) {
             stage[i] = temp.transform.GetChild(i).gameObject;
+            if(PlayerPrefs.GetInt(stage[i].name + "-cleared", 0) == 1){
+                Transform starWindow = stage[i].transform.GetChild(2);
+                starWindow.gameObject.SetActive(true);
+                Sprite GOLDSTAR = Resources.Load<Sprite>("star-gold");
+                for(int j = 0; j <= 1;j++){
+                    if(PlayerPrefs.GetInt(stage[i].name + "-star-" + j, 0) == 1){
+                        Image image = starWindow.GetChild(j+1).gameObject.GetComponent<Image>();
+                        image.sprite = GOLDSTAR;
+                    }
+                }
+            }
+            
         }
 
         onStage();

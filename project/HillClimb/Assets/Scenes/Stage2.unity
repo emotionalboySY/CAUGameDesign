@@ -22715,7 +22715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1d6c8e863d348d1a6c6d64c0f9382d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTime: 120
   time: 120
+  remainingTime: 0
 --- !u!114 &526462940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23785,13 +23787,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd59705fd034d3f498e4d18a549f5625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gatheredCoins: 0
+  maxCoins: 0
+  Length: 0
+  stageName: 
   scoreCriterias:
-  - condition: 2
-    targetValue: 0
-  - condition: 1
-    targetValue: 0
   - condition: 0
-    targetValue: 0
+    targetValue: 60
+    currentValue: 0
+  - condition: 1
+    targetValue: 66
+    currentValue: 0
 --- !u!4 &565730370
 Transform:
   m_ObjectHideFlags: 0
@@ -53971,25 +53977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1fc29a6f48d4e0f9ba42801befadbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1700840381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700840374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd59705fd034d3f498e4d18a549f5625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreCriterias:
-  - condition: 0
-    targetValue: 0
-  - condition: 0
-    targetValue: 0
-  - condition: 0
-    targetValue: 0
 --- !u!1001 &1706944053
 PrefabInstance:
   m_ObjectHideFlags: 0
