@@ -15477,8 +15477,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7803656687440846605, guid: f8909dad4d82e874e9917b0c363247e4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8909dad4d82e874e9917b0c363247e4, type: 3}
 --- !u!1 &251593333
 GameObject:
@@ -22716,6 +22715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1d6c8e863d348d1a6c6d64c0f9382d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTime: 120
+  time: 120
+  remainingTime: 0
 --- !u!114 &526462940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23756,6 +23758,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564941025}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &565730368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565730370}
+  - component: {fileID: 565730369}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &565730369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565730368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd59705fd034d3f498e4d18a549f5625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gatheredCoins: 0
+  maxCoins: 0
+  Length: 0
+  stageName: 
+  scoreCriterias:
+  - condition: 0
+    targetValue: 60
+    currentValue: 0
+  - condition: 1
+    targetValue: 66
+    currentValue: 0
+--- !u!4 &565730370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565730368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567603223
 GameObject:
   m_ObjectHideFlags: 0
