@@ -14,11 +14,12 @@ Fuel(Float)
 public class ButtonManager : MonoBehaviour
 {
     static int STAGE_NUM = 3; // num of stage
-    static int VEHICLE_NUM = 1; // num of vehicle
+    static int VEHICLE_NUM = 3; // num of vehicle
 
     private KindOfWindow window = KindOfWindow.Stage; //Stage, Tuning, Vehicle
     private GameObject[] stage; //Practice, Lake Road, etc
     private GameObject tuning;
+    private GameObject[] vehicle; //Red, Blue, Violet
     private GameObject current = null; //What window at now?
     private GameObject left;
     private GameObject right;
@@ -60,17 +61,27 @@ public class ButtonManager : MonoBehaviour
                     }
                 }
             }
-            
         }
-
+        vehicle = new GameObject[VEHICLE_NUM];
+        temp = GameObject.Find("Canvas/ColorWindow");
+        for(int i = 0;i < VEHICLE_NUM; i++){
+            vehicle[i] = temp.transform.GetChild(i).gameObject;
+        }
         onStage();
     }
 
     void Update() {
-        if(tuner.bill == 0 || tuner.bill > PlayerPrefs.GetInt("Coin", 0)) {
-            save.GetComponent<Button>().interactable = false;
-        } else {
-            save.GetComponent<Button>().interactable = true;
+        switch(window){
+            case KindOfWindow.Tuning:
+                if(tuner.bill == 0 || tuner.bill > PlayerPrefs.GetInt("Coin", 0)) {
+                    save.GetComponent<Button>().interactable = false;
+                } else {
+                    save.GetComponent<Button>().interactable = true;
+                }
+            break;
+            case KindOfWindow.Vehicle:
+                save.GetComponent<Button>().interactable = true;
+            break;
         }
     }
 
@@ -109,6 +120,8 @@ public class ButtonManager : MonoBehaviour
         }
         maxCnt = VEHICLE_NUM - 1;
         cnt = 0;
+        current = vehicle[cnt];
+        current.SetActive(true);
         left.SetActive(true);
         right.SetActive(true);
         start.SetActive(false);
@@ -141,11 +154,13 @@ public class ButtonManager : MonoBehaviour
                 PlayerPrefs.SetFloat("Fuel", tuner.fuel);
                 PlayerPrefs.Save();
                 tuner.ClearBill();
+                coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
                 break;
             case KindOfWindow.Vehicle:
+                PlayerPrefs.SetInt("BikeColor", cnt);
+                PlayerPrefs.Save();
                 break;
         }
-        coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
     }
 
     public void onLeftArrow() {
@@ -162,6 +177,7 @@ public class ButtonManager : MonoBehaviour
                 current = stage[cnt];
                 break;
             case KindOfWindow.Vehicle:
+                current = vehicle[cnt];
                 break;
         }
         current.SetActive(true);
@@ -181,6 +197,7 @@ public class ButtonManager : MonoBehaviour
                 current = stage[cnt];
                 break;
             case KindOfWindow.Vehicle:
+                current = vehicle[cnt];
                 break;
         }
         current.SetActive(true);

@@ -1674,6 +1674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3292939838423678517}
+  - component: {fileID: 3292939838423678519}
   - component: {fileID: 3292939838423678518}
   m_Layer: 0
   m_Name: bike_with_hand
@@ -1796,6 +1797,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3292939838423678519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808293411428885647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb60451f741b044bfb57812cefdb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bikeColor: 0
 --- !u!23 &3370838259919944151
 MeshRenderer:
   m_ObjectHideFlags: 0
