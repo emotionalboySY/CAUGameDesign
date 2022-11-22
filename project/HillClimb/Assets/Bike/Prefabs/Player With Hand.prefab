@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 7382914248360093879}
   - component: {fileID: 7382914248360093875}
   - component: {fileID: 7382914248360093877}
+  - component: {fileID: 6783296739096792644}
   - component: {fileID: 7978634721552302657}
   m_Layer: 0
   m_Name: Player With Hand
@@ -711,6 +712,7 @@ MonoBehaviour:
   power: 100
   rot: 45
   stability: 1.5
+  tiltWeight: 0.2
   coinCount: 0
   MaxCoin: 36
   boosterPressed: 0
@@ -718,6 +720,19 @@ MonoBehaviour:
   breakPower: 5
   coinCountFrontText: {fileID: 0}
   coinCountBackText: {fileID: 0}
+--- !u!114 &6783296739096792644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382914248360093878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdb60451f741b044bfb57812cefdb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bikeColor: 1
 --- !u!82 &7978634721552302657
 AudioSource:
   m_ObjectHideFlags: 0

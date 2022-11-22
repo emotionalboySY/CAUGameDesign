@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     WheelCollider[] frontWheels, backWheels;
     GameObject[] frontWheelMesh, backWheelMesh;
-    GameObject handleMesh, bodyMesh;
+    GameObject handleMesh;
 
     public float power;
     public float rot = 45f;
@@ -27,9 +27,6 @@ public class PlayerController : MonoBehaviour
 
     public Text coinCountFrontText;
     public Text coinCountBackText;
-
-    public string[] BikeColorString = {"Red", "Blue"};
-    public int bikeColor;
     void Awake()
     {
         playerAudio = GetComponent<AudioSource>();
@@ -80,13 +77,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -stability, 0);
         theFuel = FindObjectOfType<EngineFuelManager>();
-
-        bodyMesh = transform.Find("Body").gameObject;
-        bikeColor = PlayerPrefs.GetInt("BikeColor", 0);
-        Texture2D bodyTexture = Resources.Load<Texture2D>("Body_Texture_" + BikeColorString[bikeColor]);
-        bodyMesh.GetComponent<Renderer>().material.mainTexture = bodyTexture;
-        Texture2D handleTexture = Resources.Load<Texture2D>("Handle_Texture_" + BikeColorString[bikeColor]);
-        handleMesh.GetComponent<Renderer>().material.mainTexture = handleTexture;
     }
     void FixedUpdate()
     {

@@ -12,12 +12,7 @@ public class GoalManager : MonoBehaviour
     void stageClear() {
         PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
         string stageName = SceneManager.GetActiveScene().name;
-        Debug.Log(stageName + "]" + "criterias:");
         for(int i = 0;i < scoreManager.Length;i++){
-            //Debug.Log(i + ":Cond=" + scoreManager.scoreCriterias[i].condition);
-            //Debug.Log(i + ":current=" + scoreManager.scoreCriterias[i].currentValue);
-            //Debug.Log(i + ":target=" + scoreManager.scoreCriterias[i].targetValue);
-            //Debug.Log(i + ":clearCheck=" + scoreManager.isCleared(i));
             
             if(scoreManager.isCleared(i)){
                 PlayerPrefs.SetInt(stageName + "-star-" + i, 1);
