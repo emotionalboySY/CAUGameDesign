@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float tiltWeight = 0.2f;
     Rigidbody rb;
     public int coinCount = 0; // Remember, we will use PlayerPrefs value as "Coin", Integer value type.
-    public int MaxCoin = 15; //Maybe, make it different when stage changed.
+    public int MaxCoin = 66; //Maybe, make it different when stage changed.
     public bool boosterPressed = false; // check if booster button is pressed
     EngineFuelManager theFuel;
     AudioSource playerAudio;
@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
 
     public Text coinCountFrontText;
     public Text coinCountBackText;
-
     void Awake()
     {
         playerAudio = GetComponent<AudioSource>();
@@ -37,6 +36,7 @@ public class PlayerController : MonoBehaviour
         power = PlayerPrefs.GetFloat("Speed", 100);
         boosterWeight = PlayerPrefs.GetFloat("BoosterWeight", 5);
         breakPower = PlayerPrefs.GetFloat("BreakWeight", 5);
+        
     }
     
     public void GetItem(int count)
@@ -44,8 +44,12 @@ public class PlayerController : MonoBehaviour
         coinCountBackText.text = count.ToString();
     }
 
-    public void GameOver() {
+    void LoadGameOverScene() {
         SceneManager.LoadScene("GameOver");
+    }
+    public void GameOver() {
+        rb.centerOfMass = new Vector3(0, 1.0f, 0);
+        Invoke("LoadGameOverScene",  1.0f);
     }
 
     void Start()
@@ -73,7 +77,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -stability, 0);
         theFuel = FindObjectOfType<EngineFuelManager>();
-
     }
     void FixedUpdate()
     {
