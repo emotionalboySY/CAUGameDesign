@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ItemFuelManager : MonoBehaviour
 {
+    
     public float rotateSpeed = 45.0f;
-    //public AudioClip audioEat;
-    //AudioSource audioSource;
+    MeshRenderer meshRenderer;
+    MeshCollider meshCollider;
+    AudioSource audioSource;
     private void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshCollider = GetComponent<MeshCollider>();
     }
 
     void Update()
@@ -19,11 +23,12 @@ public class ItemFuelManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //audioSource.clip = audioEat;
-        //audioSource.Play(); //Play eatItem audio
+        
+        
         if (other.name == "Player")
         { // when collide with player
-
+            audioSource.Play(0); //Play eatItem audio
+            
             EngineFuelManager call = GameObject.Find("UI").GetComponent<EngineFuelManager>();
             float max = call.maxFuel;
 
@@ -36,9 +41,17 @@ public class ItemFuelManager : MonoBehaviour
                 call.currentFuel += max * 0.3f; // 30% increase
 
             }
-            gameObject.SetActive(false);
-        }
-    }
+            meshRenderer.enabled = false;
+            meshCollider.enabled = false;
+            Invoke("destroy", audioSource.clip.length);
 
+
+        }
+
+    }
+    void destroy()
+    {
+        gameObject.SetActive(false);
+    }
 
 }

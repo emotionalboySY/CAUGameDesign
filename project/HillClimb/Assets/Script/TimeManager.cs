@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class TimeManager : MonoBehaviour
 {
     Text timeTxt;
-    float time = 80f;
+    public float maxTime = 120f;
+    public float time;
+    public float remainingTime;
     PlayerController player;
 
     // Start is called before the first frame update
@@ -14,16 +16,18 @@ public class TimeManager : MonoBehaviour
     {
         timeTxt = GetComponent<Text>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        time = Time.timeSinceLevelLoad;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(time <= 0) {
+        time = Time.timeSinceLevelLoad;
+        remainingTime = maxTime - time;
+        if(remainingTime <= 0) {
             player.GameOver();
         } else {
-            time -= Time.deltaTime;
-            timeTxt.text = Mathf.Floor(time).ToString();
+            timeTxt.text = Mathf.Floor(remainingTime).ToString();
         }
     }
 }

@@ -5,15 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class GoalManager : MonoBehaviour
 {
+    ScoreManager scoreManager;
+    void Awake() {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    }
+    void stageClear() {
+        PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+        string stageName = SceneManager.GetActiveScene().name;
+        for(int i = 0;i < scoreManager.Length;i++){
+            
+            if(scoreManager.isCleared(i)){
+                PlayerPrefs.SetInt(stageName + "-star-" + i, 1);
+            }
+            float score = scoreManager.scoreCriterias[i].currentValue;
+            PlayerPrefs.SetInt(stageName + "-cond-" + i, (int)scoreManager.scoreCriterias[i].condition);
+            PlayerPrefs.SetFloat(stageName + "-target-" + i, (int)scoreManager.scoreCriterias[i].targetValue);
+            PlayerPrefs.SetFloat(stageName + "-score-" + i, score);
+            PlayerPrefs.SetString("LastCleared", stageName);
+        }
+        PlayerPrefs.SetInt(stageName + "-cleared", 1);
+
+
+        int coin = player.coinCount + PlayerPrefs.GetInt("Coin", 0);
+        PlayerPrefs.SetInt("Coin", coin);
+
+
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("GameClear");
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
-            PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
-            int coin = player.coinCount + PlayerPrefs.GetInt("Coin", 0);
-            PlayerPrefs.SetInt("Coin", coin); 
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("Lobby");
+            stageClear();
+            
         }
+    }
+
+    void Disable()
+    {
+        gameObject.SetActive(false);
+
+    }
+    void Able()
+    {
+        gameObject.SetActive(true);
     }
 }
