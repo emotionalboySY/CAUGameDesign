@@ -80,7 +80,11 @@ public class ButtonManager : MonoBehaviour
                 }
             break;
             case KindOfWindow.Vehicle:
-                save.GetComponent<Button>().interactable = true;
+                if(cnt == PlayerPrefs.GetInt("BikeColor", 0)) {
+                    save.GetComponent<Button>().interactable = false;
+                } else {
+                    save.GetComponent<Button>().interactable = true;
+                }
             break;
         }
     }
