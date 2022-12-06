@@ -12,8 +12,8 @@ public class BikeColorManager : MonoBehaviour
     {
         bodyMesh = GameObject.Find("Body");
         handleMesh = GameObject.Find("Handle");
-        int bikeColor = PlayerPrefs.GetInt("BikeColor", 2);
-        if(bikeColor < 0 || bikeColor > bikeColorString.Length){
+        int bikeColor = PlayerPrefs.GetInt("BikeColor", 0);
+        if (bikeColor < 0 || bikeColor > bikeColorString.Length){
             bikeColor = 0;
         }
         Texture2D bodyTexture = Resources.Load<Texture2D>("Body_Texture_" + bikeColorString[bikeColor]);
