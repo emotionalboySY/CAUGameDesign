@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameClear.unity
     guid: 4ce3fb28174a0804eaccff313f30687f
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0f4f8f67abc647347bd14f2177e5ea2b, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6d30d6ad6329f2e45b60603e23b5a459, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3b3ca16b02e54a446840363fb4ad11c4, type: 2}
