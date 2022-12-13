@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.Start))
         {
-            SceneManager.LoadScene("Stage1"); //Final: Lobby. This is temp.
+            SceneManager.LoadScene("Lobby"); //Final: Lobby. This is temp.
         }
     }
 
