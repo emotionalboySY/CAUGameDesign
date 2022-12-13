@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour
     void Booster()
     {
         rb.AddRelativeForce(0, 0, rb.mass * boosterWeight);
+        theFuel.currentFuel -= Time.deltaTime;
     }
 
     void Break()
