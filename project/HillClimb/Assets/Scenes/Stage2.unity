@@ -3593,6 +3593,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1226206854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6148471469190643598, guid: ca0b77fbef2254e4489a2039354b322a, type: 3}
+  m_PrefabInstance: {fileID: 1226206852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1226206855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226206854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c916b34dae9b9c442a566481820cc3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bikeColorString:
+  - Red
+  - Blue
+  - Violet
+  bikeColor: 1
 --- !u!1001 &1240630225
 PrefabInstance:
   m_ObjectHideFlags: 0

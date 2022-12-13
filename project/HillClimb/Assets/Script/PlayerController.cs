@@ -106,6 +106,11 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("Lobby"); //Final: Lobby. This is temp.
         }
+
+        if (OVRInput.Get(OVRInput.Button.Three) && leftHandle.Activate && rightHandle.Activate) // booster button
+        {
+            Booster();
+        }
     }
 
     void Move()
