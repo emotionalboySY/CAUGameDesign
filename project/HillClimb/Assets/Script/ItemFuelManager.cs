@@ -29,7 +29,7 @@ public class ItemFuelManager : MonoBehaviour
         { // when collide with player
             audioSource.Play(0); //Play eatItem audio
             
-            EngineFuelManager call = GameObject.Find("UI").GetComponent<EngineFuelManager>();
+            EngineFuelManager call = GameObject.Find("Player/UI/UI").GetComponent<EngineFuelManager>();
             float max = call.maxFuel;
 
             if (call.currentFuel > max * 0.7f)
