@@ -39,13 +39,13 @@ public class ButtonManager : MonoBehaviour
     private void Start() {
         tuner = GameObject.Find("TuningManagement").GetComponent<TuningManager>();
         coinTxt.text = PlayerPrefs.GetInt("Coin", 0).ToString();
-        tuning = GameObject.Find("Canvas/Tuning/TuningWindow");
-        left = GameObject.Find("Canvas/BigWindow/SmallWindow/leftArrow");
-        right = GameObject.Find("Canvas/BigWindow/SmallWindow/rightArrow");
-        start = GameObject.Find("Canvas/BigWindow/Start");
-        save = GameObject.Find("Canvas/BigWindow/Save");
+        tuning = GameObject.Find("XR_Canvas/Tuning/TuningWindow");
+        left = GameObject.Find("XR_Canvas/BigWindow/SmallWindow/leftArrow");
+        right = GameObject.Find("XR_Canvas/BigWindow/SmallWindow/rightArrow");
+        start = GameObject.Find("XR_Canvas/BigWindow/Start");
+        save = GameObject.Find("XR_Canvas/BigWindow/Save");
 
-        GameObject temp = GameObject.Find("Canvas/StageWindow");
+        GameObject temp = GameObject.Find("XR_Canvas/StageWindow");
         stage = new GameObject[STAGE_NUM];
         for(int i = 0; i < STAGE_NUM; i++) {
             stage[i] = temp.transform.GetChild(i).gameObject;

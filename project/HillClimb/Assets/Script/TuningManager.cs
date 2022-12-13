@@ -31,10 +31,10 @@ public class TuningManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpeedBar = GameObject.Find("Canvas/Tuning/TuningWindow/SpeedBar").GetComponent<Slider>();
-        BoosterWeight = GameObject.Find("Canvas/Tuning/TuningWindow/BoosterWeight").GetComponent<Slider>();
-        BreakWeight = GameObject.Find("Canvas/Tuning/TuningWindow/BreakWeight").GetComponent<Slider>();
-        FuelBar = GameObject.Find("Canvas/Tuning/TuningWindow/FuelBar").GetComponent<Slider>();
+        SpeedBar = GameObject.Find("XR_Canvas/Tuning/TuningWindow/SpeedBar").GetComponent<Slider>();
+        BoosterWeight = GameObject.Find("XR_Canvas/Tuning/TuningWindow/BoosterWeight").GetComponent<Slider>();
+        BreakWeight = GameObject.Find("XR_Canvas/Tuning/TuningWindow/BreakWeight").GetComponent<Slider>();
+        FuelBar = GameObject.Find("XR_Canvas/Tuning/TuningWindow/FuelBar").GetComponent<Slider>();
 
         speed = PlayerPrefs.GetFloat("Speed", 100);
         booster = PlayerPrefs.GetFloat("BoosterWeight", 5);
